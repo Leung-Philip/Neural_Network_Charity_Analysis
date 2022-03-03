@@ -20,9 +20,11 @@ Using TensorFlow, the binary classification model was optimized using various me
 Two hidden layers were used, both with 200 neurons each. The "ReLU" activation function was used for both hidden layers. The "sigmoid" activation function was used for the output layer. Trial and error was used to determine the number of hidden layers, neurons, and activation function. Through trial and error, up to ten hidden layers were created; however, this resulted in overfitting of the model. To prevent this, a smaller number of hidden layers were utilized, while the number of neurons increased. With trial and error, up to 500 neurons per hidden layer was tested. However, this resulted in overfitting of the model. 200 neurons per layer seemed to produce the best accuracy. ReLU, sigmoid, and tanh were tested for the activation function since they are recommended for a classification model. ReLU seemed to produce the best results. The sigmoid function is good to use for the output layer since it narrows it down between 0 and 1. 
 
 ![Accuracy Score](Images/accuracy_score.png)
+
 The optimized model achieved the target model performance of greater than 75%. 
 
 ![Name Bin](Images/name_bin.png)
+
 Multiple methods were attempted to increase model performance:
 - No columns were dropped since deep learning models are capable of handling “noisy” data, to an extent. 
 - The “NAME” features column was binned. All value counts less than 100 was placed in an “Other” bin. 
@@ -33,5 +35,5 @@ Multiple methods were attempted to increase model performance:
 ## Summary
 Given a dataset containing charity information, the original deep learning model achieved an accuracy score of less than 75%. Several methods (such as binning, adjusting the number of hidden layers, neurons, and epochs) were used to attempt to optimize the deep learning model. After optimizing the deep learning model, an accuracy score of greater than 75% was achieved. Additionally, the model loss improved - from approximately 0.55 in the original model to less than 0.50 in the optimized model. 
 
-### Other recommended model:
+#### Other recommended model:
 Support vector machines (SVMs) are supervised learning models that analyze data used for regression and classification. SVMs could be used to solve the classification problem if a different model is required. Unlike neural network and deep learning models, SVMs are less prone to overfitting because they are trying to maximize the distance, rather than encompass all data within a boundary. Trial and error was used frequently in determining the number of hidden layers, neurons, and epochs since these three factors can cause the model to overfit. Additionally, if time was a factor, the amount of code required to build and train the SVM is notably less than the comparable deep learning model. Furthermore, in many straightforward binary classification problems, SVMs will outperform the basic neural network, and even deep learning models with ease.
